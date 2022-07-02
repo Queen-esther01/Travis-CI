@@ -14,7 +14,7 @@ before_script:
   - echo "no tests required"
 
 script:
-  - docker --version # print the docker version for loggine purposes
+  - docker --version # print the docker version for loggin purposes
   - docker build -t simple-node .
   - docker tag simple-node "$DOCKER_USERNAME"/simple-node:latest
 
