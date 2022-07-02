@@ -3,6 +3,10 @@ function sleep(ms) {
 }
 
 async function main() {
+  const favoriteFood = process.env.FAVORITE_FOOD;
+  const dockerUsername = process.env.DOCKER_USERNAME;
+  console.log(`My favorite food is ${favoriteFood}`);
+  console.log(`My docker username is ${dockerUsername}`);
   while(true) {
     console.log('Containers rule!');
     await sleep(5000);
