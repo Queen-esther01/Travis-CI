@@ -16,7 +16,7 @@ before_script:
 script:
   - docker --version # print the docker version for loggin purposes
   - docker build -t simple-node-2 --build-arg FAVORITE_FOOD=${FAVORITE_FOOD} .
-  - docker tag simple-node esthercatheryn/simple-node-2:latest
+  - docker tag simple-node-2 esthercatheryn/simple-node-2:latest
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
